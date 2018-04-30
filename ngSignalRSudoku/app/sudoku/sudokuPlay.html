@@ -1,0 +1,16 @@
+﻿<div>
+    <h3>Вы со стоити в группе {{groupName}}</h3>
+    <div class="sudoku">
+        <div class="sudoku-row" ng-repeat="row in sudoku.Grid">
+            <input type="number" class="sudoku-cell" ng-repeat="cell in row.Cells"
+                   min="0" max="9" step="1" maxlength="1" ng-readonly="cell.Freezed"
+                   ng-class="{'sudoku-cell-readonly': cell.Freezed, 'has-success': cell.IsCorrect}"
+                   ng-change="onCellChange(cell);" ng-model="cell.Data" />
+        </div>
+    </div>
+    <div>
+        <a ng-href="#/gameOver">Завершить</a>
+        <p > Вы набрали: {{value}}</p>
+        <input type="submit" value="Завершить"/>
+    </div>
+</div>

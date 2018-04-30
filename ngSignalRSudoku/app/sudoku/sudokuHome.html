@@ -1,0 +1,14 @@
+﻿<div>
+    <h2>Групповая Судоку</h2>
+    <div>
+        <h4>Для подключения нажмите на игру</h4>
+        <ul>
+            <li ng-repeat="group in groups">
+                <a class="h3" ng-href="#/play/{{group.Name}}">{{group.Name}}</a> : Создатель: {{group.CreatedBy}}
+            </li>
+        </ul>
+        <hr class="sm" />
+        <!--<a ng-click="loadGroups();">Reload Groups</a>--> | 
+        <a href="#/groups/create">Создать новую группу</a>
+    </div>
+</div>
